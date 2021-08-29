@@ -1,0 +1,28 @@
+<%- include('./partials/header.ejs')  %>
+<%- include('./partials/nav.ejs')  %>
+
+<form class="form-inline" action="/add-fortune" method="POST">
+
+    <!-- <div class="inline-input form-group mr-2">
+        <label class="sr-only" for="brandid">User ID</label>
+        <input class="form-control"
+               type="text"
+               name="user"
+               value="<%= currentUser._id %>"
+        />
+    </div> -->
+
+    <div class="inline-input form-group mr-2">
+        <label class="sr-only" for="description">Fortune</label>
+        <input class="form-control"
+               type="text"
+               name="fortune"
+               placeholder="Enter Fortune"
+        />
+    </div>
+    <button type="submit" class="inline-input btn btn-primary">Add Fortune</button>
+</form>
+
+
+
+<%- include('./partials/footer.ejs')  %>

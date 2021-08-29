@@ -1,0 +1,25 @@
+<%- include('./partials/header.ejs')  %>
+<%- include('./partials/nav.ejs')  %>
+
+<% if (fortunes) { %>
+<div class="table-responsive">
+    <table class="table table-bordered table-hover table-sm">
+        <thead class="thead-light">
+        <th>Fortune ID</th>
+        <th>Fortune</th>
+        </thead>
+        <tbody>
+        <% fortunes.forEach((fortune) => { %>
+            <tr>
+                <td><%= fortune.id %></td>
+                <td><%= fortune.fortune_vc %></td>
+            </tr>
+        <% }) %>
+<% } else { %>
+    <p>There are no fortunes to display</p>
+    <p>Try adding some now!</p>
+
+<% } %>
+
+
+<%- include('./partials/footer.ejs')  %>

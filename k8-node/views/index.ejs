@@ -1,0 +1,22 @@
+<%- include('./partials/header.ejs')  %>  
+<%- include('./partials/nav.ejs')  %>  
+<header class="masthead">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-12 text-center">
+
+                <% if (fortunes) { %>
+                    <% fortunes.forEach((fortune) => {%>
+                        <h1 class="font-weight-light"><%= fortune.fortune_vc %></h1>
+                        <a href="/" class="btn btn-info" role="button">Get New Fortune</a>
+                    <% }) %>
+                <% } else { %>
+                    <p>There are no fortunes to display</p>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</header>
+
+<%- include('./partials/footer.ejs')  %>  
+
