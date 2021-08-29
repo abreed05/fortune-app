@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: pythonfortunes
-        image: abree05/k8-python-fortune:latest
+        image: dockerhub/pythonimage
         ports:
         - containerPort: 5000
 
